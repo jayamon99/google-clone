@@ -1,19 +1,37 @@
+import { Avatar } from "@material-ui/core";
 import React from "react";
-import "./home.css";
-import {Avatar} from "@material-ui/core";
-import AppsIcon from “@material-ui/icons/Apps”;
+import { Link } from "react-router-dom";
+import AppsIcon from "@material-ui/icons/Apps";
+import "./Home.css";
+import Search from "../components/Search";
 
-function home() {
+function Home() {
   return (
-    <div>
-      <div className="home_header">
-        <div className="home_headerLeft"></div>
-        <div className="home_headerRight"></div>
+    <div className="home">
+      <div className="home__header">
+        <div className="home__headerLeft">
+          <Link to="/about">About</Link>
+          <Link to="/store">Store</Link>
+        </div>
+        <div className="home__headerRight">
+          <Link to="/gmail">Gmail</Link>
+          <Link to="/images">Images</Link>
+          <AppsIcon />
+          <Avatar />
+        </div>
       </div>
 
-      <div className="home_body"></div>
+      <div className="home__body">
+        <img
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+          alt="logo"
+        />
+        <div className="home__inputContainer">
+        { <Search />}
+        </div>
+      </div>
     </div>
   );
 }
 
-export default home;
+export default Home;
