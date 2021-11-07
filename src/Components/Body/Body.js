@@ -22,7 +22,7 @@ const Body = () => {
           <section>
             <div className={styler.form}>
               <div className={styler.comp_logo}>
-               {textstate?<p>{setTextstate}</p> : <img
+               {textstate?<p>{textstate}</p> : <img
                   src={sidehustle}
                   alt='google logo'
                   className={styler.sidelogo}
