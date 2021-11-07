@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import MicIcon from "@material-ui/icons/Mic";
 import { Button } from "@material-ui/core";
-import "./Search.css";
+import "../pages/Search.css";
 import { useStateValue } from "../StateProvider";
 import { useHistory } from "react-router-dom";
 import { actionTypes } from "../reducer";
